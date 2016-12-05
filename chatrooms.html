@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Chat Rooms</title>
+    <script>
+        var name;
+        var socket = io.connect("http://localhost:1234");
+            $(function () {
+                //as the user to enter their nick name or name.
+                name = window.prompt("enter your name");
+                //If the name is not given, ask the user to enter once again
+                if (name == null) {
+                    $("body").html(" please refresh the page and try again ");
+                }
+        });
+    </script>
+</head>
+
+<body>
+    <div id='chatrooms'>
+        <strong>waiting for incoming chats...</strong>
+    </div>
+</body>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $.ajax({url: "demo_test.txt", success: function(result){
+                $("#chatrooms").html(result);
+            }});
+        });
+    });
+</script>
+</html>

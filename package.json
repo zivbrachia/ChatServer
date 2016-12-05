@@ -1,0 +1,19 @@
+{
+  "name": "chatserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ChatServer.js",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "restify": "^4.3.0"
+  },
+  "Dependencies": {
+    "restify": "",
+    "fs": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
